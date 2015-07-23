@@ -5,56 +5,6 @@
  * @package WGI Informer
  */
 
-add_action('init', 'register_custom_roles', 0);
-function register_custom_roles() {
- add_role('content_manager',
-          'Content Manager',
-          array(
-            'read'                => true,
-            'edit_posts'          => false,
-            'delete_others_posts' => true,
-            'delete_posts'        => true,
-            'publish_posts'       => false,
-            'upload_files'        => true,
-            'manage_categories'   => true,
-          )
-  );
-  remove_role('content_manager');
-}
-
-add_action('admin_init','register_custom_capabilities', 999);
-function register_custom_capabilities() {
-
-  $content_types = array(
-    "announcement"  => "announcements",
-    "event"         => "events",
-    "favorite"      => "favorites",
-    "article"       => "news",
-    "album"         => "photos",
-    "division"      => "resources",
-    "spotlight"     => "spotlights"
-  );
-
-  foreach ($content_types as $key => $value) {
-    $roles = array('content_manager', 'editor', 'administrator');
-
-    foreach($roles as $the_role) {
-      $role = get_role($the_role);
-      $role->add_cap('read');
-      $role->add_cap('read_' . $key);
-      $role->add_cap('read_private_' . $value);
-      $role->add_cap('edit_' . $key);
-      $role->add_cap('edit_' . $value);
-      $role->add_cap('edit_others_' . $value);
-      $role->add_cap('edit_published_' . $value);
-      $role->add_cap('publish_' . $value);
-      $role->add_cap('delete_others_' . $value);
-      $role->add_cap('delete_private_' . $value);
-      $role->add_cap('delete_published_' . $value);
-    }
-  }
-}
-
 /*
  * Announcements post type
  *
@@ -320,4 +270,63 @@ function spotlights_post_type() {
   );
 
   register_post_type('spotlights', $args);
+}
+
+/*
+ * Content Manager role
+ *
+ * Can read, delete posts, manage files, manage categories
+ */
+add_action('init', 'register_custom_roles', 0);
+function register_custom_roles() {
+ add_role('content_manager',
+          'Content Manager',
+          array(
+            'read'                => true,
+            'edit_posts'          => false,
+            'delete_others_posts' => true,
+            'delete_posts'        => true,
+            'publish_posts'       => false,
+            'upload_files'        => true,
+            'manage_categories'   => true,
+          )
+  );
+}
+
+/*
+ * Content Manager capabilities
+ *
+ * Let Content Manager manage custom post types
+ */
+add_action('admin_init','register_custom_capabilities', 999);
+function register_custom_capabilities() {
+
+  $content_types = array(
+    "announcement"  => "announcements",
+    "event"         => "events",
+    "favorite"      => "favorites",
+    "article"       => "news",
+    "album"         => "photos",
+    "division"      => "resources",
+    "spotlight"     => "spotlights"
+  );
+
+  foreach ($content_types as $key => $value) {
+    $roles = array('content_manager', 'editor', 'administrator');
+
+    foreach($roles as $the_role) {
+      $role = get_role($the_role);
+      $role->add_cap('read');
+      $role->add_cap('read_' . $key);
+      $role->add_cap('read_private_' . $value);
+      $role->add_cap('edit_' . $key);
+      $role->add_cap('edit_' . $value);
+      $role->add_cap('edit_others_' . $value);
+      $role->add_cap('edit_published_' . $value);
+      $role->add_cap('publish_' . $value);
+      $role->add_cap('delete_others_' . $value);
+      $role->add_cap('delete_private_' . $value);
+      $role->add_cap('delete_published_' . $value);
+    }
+  }
 }
