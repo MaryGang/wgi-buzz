@@ -328,8 +328,5 @@ function register_custom_capabilities() {
       $role->add_cap('delete_private_' . $value);
       $role->add_cap('delete_published_' . $value);
     }
-
-    $c_role = get_role('content_manager');
-    $c_role->remove_cap('edit_others_posts');
   }
 }
