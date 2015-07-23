@@ -330,6 +330,6 @@ function register_custom_capabilities() {
     }
 
     $c_role = get_role('content_manager');
-    $c_role->add_cap('edit_others_posts');
+    $c_role->remove_cap('edit_others_posts');
   }
 }
