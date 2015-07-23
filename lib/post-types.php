@@ -33,7 +33,7 @@ function register_custom_capabilities() {
     "spotlight"     => "spotlights"
   );
 
-  foreach ($content_types as $key, $value) {
+  foreach ($content_types as $key => $value) {
     $roles = array('content_manager', 'editor', 'administrator');
 
     foreach($roles as $the_role) {
