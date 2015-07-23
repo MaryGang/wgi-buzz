@@ -19,6 +19,7 @@ function register_custom_roles() {
             'manage_categories'   => true,
           )
   );
+  remove_role('content_manager');
 }
 
 add_action('admin_init','register_custom_capabilities', 999);
