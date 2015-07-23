@@ -26,7 +26,7 @@ function register_custom_capabilities() {
   $content_types = array(
     "announcement"  => "announcements",
     "event"         => "events",
-    "favorite"      => "favorites"
+    "favorite"      => "favorites",
     "article"       => "news",
     "album"         => "photos",
     "division"      => "resources",
