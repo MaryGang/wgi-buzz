@@ -10,11 +10,12 @@ function register_custom_roles() {
  add_role('content_manager',
           'Content Manager',
           array(
-            'read'              => true,
-            'edit_posts'        => false,
-            'delete_posts'      => true,
-            'publish_posts'     => false,
-            'upload_files'      => true,
+            'read'                => true,
+            'edit_posts'          => false,
+            'delete_others_posts' => true,
+            'delete_posts'        => true,
+            'publish_posts'       => false,
+            'upload_files'        => true,
           )
   );
 }
