@@ -16,6 +16,7 @@ function register_custom_roles() {
             'delete_posts'        => true,
             'publish_posts'       => false,
             'upload_files'        => true,
+            'manage_categories'   => true,
           )
   );
 }
