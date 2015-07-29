@@ -13,7 +13,7 @@ function wgiinformer_scripts() {
   wp_enqueue_style('wgiinformer-style', get_stylesheet_uri(), array(), '1.0.0', 'all');
 
   /* Load the script (app.js): handle name, script path, dependencies, version, load in footer */
-  wp_enqueue_script('wgiinformer-script', get_stylesheet_directory_uri() . '/app.js', array('jquery'), '1.0.0', true);
+  wp_enqueue_script('wgiinformer-script', get_stylesheet_directory_uri() . '/app.js', array('jquery'), '1.0.1', true);
 
   /* If this is the Offices page, load scripts necessary to run Mapbox */
   if (is_page(16)) {
