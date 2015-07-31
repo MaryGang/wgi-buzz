@@ -20,7 +20,7 @@ nav .brand-logo {
     svg,
     img {
       left: 0;
-      margin-top: 8px;
+      margin-top: 13px;
       position: absolute;
       top: 0;
     }
@@ -35,6 +35,7 @@ nav .brand-logo {
   /* Adjustments on small devices */
   @include breakpoint($mq_small) {
     left: auto;
+    max-width: 175px;
     transform: none;
   }
 }
