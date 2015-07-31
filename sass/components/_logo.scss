@@ -20,13 +20,13 @@ nav .brand-logo {
     svg,
     img {
       left: 0;
-      margin-top: 7px;
+      margin-top: 6px;
       position: absolute;
       top: 0;
 
       /* Move down on small devices */
       @include breakpoint($mq_small) {
-        margin-top: 9px;
+        margin-top: 8px;
       }
     }
   }
