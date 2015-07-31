@@ -4,7 +4,5 @@
 
 /* Make the height of the masthead 64px on small devices */
 #masthead {
-  @include breakpoint($mq_small) {
-    height: 56px;
-  }
+  height: 56px !important;
 }
