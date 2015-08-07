@@ -6,7 +6,7 @@
 #lean-overlay {
 
   /* Darken overlay */
-  opacity: 0.85;
+  opacity: 0.85 !important;
 
   /* Hide on small devices */
   @include breakpoint($mq_small) {
