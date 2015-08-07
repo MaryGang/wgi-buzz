@@ -20,11 +20,12 @@
 
   /* Give some padding to the wrapper */
   .nav-wrapper {
+    padding-left: 1.25em;
     padding-right: 0.25em;
 
     /* Styles for small devices */
     @include breakpoint($mq_small) {
-      padding-left: 0.5em;
+      padding-left: 0.75em;
     }
   }
 
