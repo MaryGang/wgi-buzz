@@ -19,11 +19,6 @@
   ?>
 
   <div class="side-nav_top <?php echo $user_profile_division; ?>">
-    <div class="side-nav_top-links">
-      <a href="<?php echo site_url(); ?>/logout" class="user-profile_sign-out user-profile_link"><i class="fa fa-sign-out"></i><span>sign out</span></a>
-      <a href="<?php echo site_url(); ?>/user" class="user-profile_account user-profile_link"><i class="fa fa-user"></i><span>profile</span></a>
-    </div>
-
     <?php
       /* If there's a user photo, load it here */
       if ($user_profile_photo != '') {
@@ -35,8 +30,13 @@
       }
     ?>
 
+    <div class="side-nav_top-links">
+      <a href="<?php echo site_url(); ?>/logout" class="user-profile_sign-out user-profile_link"><i class="fa fa-sign-out"></i><span>sign out</span></a>
+      <a href="<?php echo site_url(); ?>/user" class="user-profile_account user-profile_link"><i class="fa fa-user"></i><span>profile</span></a>
+    </div><!-- .side-nav_top-links -->
+
     <p class="user-profile_name"><?php echo $user_profile_name; ?></p>
     <p class="user-profile_email"><?php echo $user_profile_email; ?></p>
   </div>
   <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => '', 'menu_class' => 'side-nav_menu', 'container' => false ) ); ?>
-</div>
+</div><!-- #main-nav.side-nav -->
