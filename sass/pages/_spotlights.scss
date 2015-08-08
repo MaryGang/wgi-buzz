@@ -5,11 +5,6 @@
 /* Styles for the Spotlights page (not the modal) */
 #spotlights {
 
-  /* Slight right margin for Spotlight Font Awesome icons */
-  .fa {
-    margin-right: 0.25em;
-  }
-
   /* Give cards in the Spotlight section some padding */
   .card-grid {
     padding: 0.75em;
@@ -29,6 +24,23 @@
         clear: both;
       }
     }
+  }
+
+  /* Styles for a Spotlights card on small devices */
+  .card {
+
+    /* Give max width and center via margins */
+    @include breakpoint($mq_small) {
+      margin: 0 auto;
+      max-width: 300px;
+    }
+  }
+
+  /* Styles for the "x" that closes the Spotlight modal */
+  .mdi-navigation-close {
+    height: auto;
+    line-height: inherit;
+    width: auto;
   }
 
   /* Make card image slightly transparent on hover */
@@ -51,6 +63,16 @@
       text-overflow: ellipsis;
       white-space: nowrap;
       word-wrap: normal;
+
+      /* Increase line height of title slightly */
+      &.card-title {
+        line-height: 1.25;
+      }
     }
+  }
+
+  /* Slight right margin for Spotlight Font Awesome icons */
+  .fa {
+    margin-right: 0.25em;
   }
 }
