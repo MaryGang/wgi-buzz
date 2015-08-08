@@ -87,6 +87,7 @@
       a {
         @extend .clearfix;
 
+        display: inline-block;
         height: auto;
         line-height: 1;
         padding: 0;
