@@ -58,7 +58,7 @@
       }
     ?>
 
-    <header id="masthead" class="site-header navbar-fixed" role="banner">
+    <header id="masthead" class="site-header" role="banner">
 
     <?php if (is_user_logged_in()): ?>
 
