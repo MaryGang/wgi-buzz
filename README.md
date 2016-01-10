@@ -20,7 +20,7 @@ Chrome 35+, Firefox 31+, Safari 7+, IE 10+
 - Node.js ([https://nodejs.org/](https://nodejs.org/))
 - npm ([https://www.npmjs.com/](https://www.npmjs.com/))
 
-## CSS + Sass Requirements
+## Sass Requirements
 - Breakpoint ([http://breakpoint-sass.com/](http://breakpoint-sass.com/))
 - Font Awesome ([http://fortawesome.github.io/Font-Awesome/](http://fortawesome.github.io/Font-Awesome/))
 - Materialize ([http://materializecss.com/](http://materializecss.com/))
