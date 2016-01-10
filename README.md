@@ -1,5 +1,5 @@
 # WGI Informer
-A WordPress theme for the WGI intranet.
+A [WordPress](https://wordpress.org/) theme for the WGI intranet.
 
 ### Current Version : v2.0.13
 
