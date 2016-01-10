@@ -17,7 +17,6 @@ Chrome 35+, Firefox 31+, Safari 7+, IE 10+
 4. `gulp` will compile .scss and .js files and then watch them. For production, use `NODE_ENV=prd gulp`
 
 ## Compile Requirements
-- [Gulp](http://gulpjs.com/)
 - [Node.js](https://nodejs.org/)
 - [npm](https://www.npmjs.com/)
 
